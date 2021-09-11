@@ -1,6 +1,5 @@
 # New-mod
 [Have fun](./buildQmod.ps1)
-& ./CreateQmod.ps1
   
 param($p1)
 
