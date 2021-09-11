@@ -1,3 +1,4 @@
+./buildQmod.ps1
 {
 "_QPVersion": "1.0.0",
 "name": "Fly High",
