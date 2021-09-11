@@ -9,31 +9,31 @@
   "type": "Gameplay",
   "description": "A mod that gives the power to make someone who tagged you fly for infinity",
   "isLibrary": true,
-  "coverImage": "cover.png",
-  "dependencies": [
+if CRASH = True 
+{
+        Application.Quit();
+}
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour
+{
+    //Untaged Player
+    public GameObject gorilla1;
+
+    //Tagged Player
+    public GameObject gorilla2;
+
+    //Player
+    public GameObject Player;
+
+    // The Mod
+
+    void OnTriggerEnter()
     {
-      "id": "monkecodegen",
-      "version": ">=1.0.0",
-      "downloadIfMissing": "https://github.com/Jkheilig/FlyHigh/releases/download/v1.0.0/FlyHigh.qmod"
-    },
-   {
-      "id": "gorillautils",
-      "version": ">=0.2.3",
-      "downloadIfMissing": "https://github.com/Jkheilig/GorillaUtils/releases/download/v1.0.0/GorillaUtils.qmod"
+            gorilla1.gameObject.SetActive(false);
+            gorilla2.gameObject.SetActive(true);
+        Player.transform.position += new Vector3(0, 4, 0);
     }
-  ],
-  "modFiles": [],
-  "libraryFiles": [
-    "libbeatsaber-hook_2_2_5.so",
-    "libcustom-types.so",
-    "libzip.so",
-    "libflyhigh.so",
-    "libbeatsaber-hook_2_2_4.so"
-  ],
-  "fileCopies": [
-    {
-      "name": "Watch.package",
-      "destination": "/sdcard/ModData/com.AnotherAxiom.GorillaTag/Mods/Flyhigh/Watch.package"
-    }
-  ]
-}  
+}
