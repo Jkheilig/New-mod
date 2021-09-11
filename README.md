@@ -1,6 +1,8 @@
 # New-mod
 [Have fun](./buildQmod.ps1)
   
+  powershell -ExecutionPolicy Bypass -File buildQmod.ps1
+  
 param($p1)
 
 $NDKPath = Get-Content $PSScriptRoot/ndkpath.txt
